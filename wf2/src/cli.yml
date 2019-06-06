@@ -66,6 +66,11 @@ subcommands:
       args:
         - cmd:
             multiple: true
+  - push:
+      about: Push files or folders from the PHP container to the host
+      args:
+        - cmd:
+            multiple: true
   - m:
       about: Execute commands in the PHP container
       args:

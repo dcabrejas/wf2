@@ -203,6 +203,17 @@ fn get_tasks_and_context(
             };
             Some(Cmd::Pull { trailing })
         }
+        ("push", Some(sub_matches)) => {
+            let trailing = match sub_matches.values_of("cmd") {
+                Some(cmd) => cmd
+                    .collect::<Vec<&str>>()
+                    .into_iter()
+                    .map(|s| s.to_string())
+                    .collect(),
+                None => vec![],
+            };
+            recipe.resolve(&ctx, Cmd::Push { trailing })
+        }
         ("exec", Some(sub_matches)) => {
             let trailing = get_trailing(sub_matches);
             let user = if sub_matches.is_present("root") {

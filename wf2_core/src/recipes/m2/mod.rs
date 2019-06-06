@@ -12,6 +12,7 @@ pub mod m2_env;
 pub mod mage;
 pub mod npm;
 pub mod pull;
+pub mod push;
 pub mod stop;
 pub mod up;
 

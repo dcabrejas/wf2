@@ -182,11 +182,12 @@ pub enum Cmd {
     Exec { trailing: String, user: String },
     Doctor,
     Pull { trailing: Vec<String> },
+    Push { trailing: Vec<String> },
     DBImport { path: PathBuf },
     DBDump,
     Npm { trailing: String, user: String },
     Mage { trailing: String },
-    Composer { trailing: String },
+    Composer { trailing: String }
 }
 
 fn get_context_name(cwd: &PathBuf) -> String {
