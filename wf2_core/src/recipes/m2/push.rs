@@ -1,4 +1,4 @@
-use crate::{context::Context, task::Task} 
+use crate::{context::Context, task::Task}; 
 use std::path::PathBuf;
 
 pub fn exec(ctx: &Context, trailing: Vec<String>) -> Vec<Task> {
