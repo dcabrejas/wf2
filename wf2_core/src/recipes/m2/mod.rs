@@ -31,6 +31,7 @@ impl Recipe for M2Recipe {
             Cmd::DBImport { path } => Some(db_import::exec(&ctx, path.clone())),
             Cmd::DBDump => Some(db_dump::exec(&ctx)),
             Cmd::Pull { trailing } => Some(pull::exec(&ctx, trailing.clone())),
+            Cmd::Push { trailing } => Some(push::exec(&ctx, trailing.clone())),
             Cmd::Doctor => Some(self.doctor(&ctx)),
             Cmd::Composer { trailing } => Some(composer::exec(&ctx, trailing.clone())),
         }

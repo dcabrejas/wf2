@@ -187,7 +187,7 @@ pub enum Cmd {
     DBDump,
     Npm { trailing: String, user: String },
     Mage { trailing: String },
-    Composer { trailing: String }
+    Composer { trailing: String },
 }
 
 fn get_context_name(cwd: &PathBuf) -> String {

@@ -212,7 +212,7 @@ fn get_tasks_and_context(
                     .collect(),
                 None => vec![],
             };
-            recipe.resolve(&ctx, Cmd::Push { trailing })
+            Some(Cmd::Push { trailing })
         }
         ("exec", Some(sub_matches)) => {
             let trailing = get_trailing(sub_matches);
